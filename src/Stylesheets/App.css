@@ -1,0 +1,206 @@
+/* -------------------- Base Layout -------------------- */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(120deg, #f9f9f9 0%, #e3e9f6 50%, #f9f9f9 100%);
+  background-size: 200% 200%;
+  animation: gradientMove 16s ease-in-out infinite;
+  color: #222;
+  line-height: 1.6;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Scroll-triggered fade animations */
+.scroll-fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.scroll-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* -------------------- Fixed Navigation -------------------- */
+nav {
+  position: fixed;
+  top: 0;
+  left: -44px;
+  width: 100%;
+  background: #ffffff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+  font-weight: 600;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #007acc;
+}
+
+/* -------------------- Main Container -------------------- */
+main {
+  padding-top: 100px; /* Space for fixed nav */
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+/* -------------------- Hero Flex Layout -------------------- */
+.hero-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 250px;
+  text-align: left;
+}
+
+.hero-image {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid;
+
+}
+
+
+/* -------------------- Hero Section -------------------- */
+.homepage-container {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.homepage-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1e1e1e;
+}
+
+.homepage-subtitle {
+  font-size: 1.4rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.homepage-objective {
+  font-size: 1.05rem;
+  color: #444;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+/* -------------------- Projects Section -------------------- */
+.projects-section {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.projects-section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.project-box {
+  background-color: #ffffff;
+  padding: 1.2rem 2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #1e1e1e;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  min-width: 220px;
+  max-width: 280px;
+  text-align: center;
+}
+
+.project-box:hover {
+  background-color: #f0f8ff;
+  color: #007acc;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* -------------------- Fade-in for main content on load -------------------- */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* -------------------- Responsive -------------------- */
+@media (max-width: 768px) {
+  .homepage-title {
+    font-size: 2.2rem;
+  }
+
+  .homepage-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .homepage-objective {
+    font-size: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .project-box {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+
+
+
