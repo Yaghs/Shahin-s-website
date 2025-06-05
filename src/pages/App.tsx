@@ -3,8 +3,6 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Resume from './resume';
 import About from './About';
 import profilePic from '../images/profile.jpg';
-import reactGif from '../images/React.gif';
-import TypeScriptImage from '../images/TypeScript.png';
 import '../Stylesheets/App.css';
 
 type Project = {
