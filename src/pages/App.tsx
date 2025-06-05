@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { resume } from './resume';
+import Resume from './resume';
 import About from './About';
 import profilePic from '../images/profile.jpg';
 import reactGif from '../images/React.gif';
@@ -100,6 +100,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomeContent />} />
         <Route path="/about" element={<About />} />
+        <Route path="/resume" element={<Resume />} />
       </Routes>
     </Router>
   );
