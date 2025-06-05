@@ -17,7 +17,7 @@ type Project = {
 const projects: Project[] = [
   { name: 'PlotTwist Movie App', link: 'https://plottwistsp.web.app/', tech: '<HTML, CSS, JS, Firebase>' },
   { name: 'Portfolio Website', link: 'https://github.com/Yaghs/Shahin-s-website/tree/main', tech: '<TypeScript / React>' },
-  { name: 'Labling cost model', link: '', tech: '<Excel / R-Shiny>' },
+
   { name: 'Medical classification model', link: 'https://www.fda.gov/about-fda/economic-impact-analyses-fda-regulations/medical-devices-general-and-plastic-surgery-devices-classification-certain-solid-wound-dressings', tech: '<Excel / VBA>' }
 ];
 

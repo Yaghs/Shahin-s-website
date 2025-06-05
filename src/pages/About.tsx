@@ -36,7 +36,7 @@ function About() {
         <div className="about-text">
           <h1>About Me</h1>
           <p>
-            Recent Computer Science graduate with internship experience at the FDA, specializing in web development, automation, and data-driven applications. Skilled in building responsive, user-friendly interfaces and full-stack solutions using modern programming languages and frameworks. As a first-generation college graduate and quick learner, I bring a strong work ethic, a collaborative mindset, and a passion for solving real-world problems through technology.
+            I am a recent Computer Science graduate from SUNY Farmingdale, having earned my Bachelor’s degree on May 21, 2025, with a cumulative GPA of 3.4. I gained professional experience as a Data Scientist Intern with the U.S. Food and Drug Administration during Summer 2024 and Spring 2025. I am a dedicated and motivated individual, eager to apply my skills and contribute meaningfully to impactful projects and teams.
           </p>
           
         <div className="contact-links">
@@ -79,7 +79,24 @@ function About() {
     <div className="skill-box"><img src={RstudioImage} alt="R-Studio" /><div className="skill-label">R-Studio</div></div>
   </div>
 </div>
+    <div className="about-text">
+      <h1>Certifications</h1>
+    </div>
+    <div className="skills-section">
+      <div className="contact-links">
+      <a href="https://udemy-certificate.s3.amazonaws.com/image/UC-0970c011-54dc-48d9-bd6e-d0c0beabed6a.jpg?v=1725657213000"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="skill-box"
+        ><img src={R} alt="R" /><div className="skill-label">R-Shiny</div></a>
+      <a href="https://udemy-certificate.s3.amazonaws.com/image/UC-68d4a571-3798-4fbf-a669-25aee7097332.jpg?v=1743992431000"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="skill-box"
+          ><img src={SQL} alt="SQL" /><div className="skill-label">SQL</div></a>
       
+    </div>
+    </div>
     </main>
   );
 }
