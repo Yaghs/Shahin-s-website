@@ -147,6 +147,7 @@ main {
 }
 
 .project-box {
+  position: relative;
   background-color: #ffffff;
   padding: 1.2rem 2rem;
   border-radius: 10px;
@@ -158,6 +159,17 @@ main {
   min-width: 220px;
   max-width: 280px;
   text-align: center;
+}
+
+.project-tech {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #555;
+    padding: 2px 6px;
+    border-radius: 6px;
 }
 
 .project-box:hover {

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { resume } from './resume';
+import About from './About';
 import profilePic from '../images/profile.jpg';
 import reactGif from '../images/React.gif';
 import TypeScriptImage from '../images/TypeScript.png';
@@ -9,14 +10,17 @@ import '../Stylesheets/App.css';
 type Project = {
   name: string;
   link: string;
+  tech?: string;
 };
 
+
 const projects: Project[] = [
-  { name: 'PlotTwist Movie App', link: 'https://plottwistsp.web.app/'},
-  { name: 'Portfolio Website', link: ''},
-  { name: 'Labling cost model', link: ''},
-  { name: 'Medical classfication model', link: ''},
+  { name: 'PlotTwist Movie App', link: 'https://plottwistsp.web.app/', tech: '<HTML, CSS, JS, Firebase>' },
+  { name: 'Portfolio Website', link: 'https://github.com/Yaghs/Shahin-s-website/tree/main', tech: '<TypeScript / React>' },
+  { name: 'Labling cost model', link: '', tech: '<Excel / R-Shiny>' },
+  { name: 'Medical classification model', link: 'https://www.fda.gov/about-fda/economic-impact-analyses-fda-regulations/medical-devices-general-and-plastic-surgery-devices-classification-certain-solid-wound-dressings', tech: '<Excel / VBA>' }
 ];
+
 
 function HomeContent() {
   const fadeRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -63,34 +67,25 @@ function HomeContent() {
         <h2>Projects</h2>
         <div className="projects-grid">
           {projects.map((project) => (
-            <a
-              key={project.name}
-              href={project.link || "#"}
-              target={project.link ? "_blank" : undefined}
-              rel={project.link ? "noopener noreferrer" : undefined}
-              className="project-box"
-              style={{ pointerEvents: project.link ? "auto" : "none", opacity: project.link ? 1 : 0.6 }}
-            >
-              {project.name}
-            </a>
-          ))}
+  <a
+    key={project.name}
+    href={project.link}
+    className="project-box"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <div className="project-name">{project.name}</div>
+    {project.tech && <div className="project-tech">{project.tech}</div>}
+  </a>
+))}
+
         </div>
       </section>
     </main>
   );
 }
 
-function About() {
-  return (
-    <main className="about-container fade-in">
-      <h1>About Me</h1>
-      <p>
-        I am a recent Computer Science graduate with a passion for data science, automation, and full-stack development.
-        My experience includes an internship at the FDA, where I contributed to innovative technology solutions.
-      </p>
-    </main>
-  );
-}
+
 
 function App() {
   return (
