@@ -34,7 +34,7 @@ body {
 nav {
   position: fixed;
   top: 0;
-  left: -44px;
+  left: -34px;
   width: 100%;
   background: #ffffff;
   padding: 1rem 2rem;
@@ -54,6 +54,33 @@ nav a {
 
 nav a:hover {
   color: #007acc;
+}
+
+@media (max-width: 768px) {
+    nav {
+    position: fixed;
+    top: 0;
+    left: -23px;
+    width: 100%;
+    background: #ffffff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+    font-weight: 600;
+  }
+  
+  .homepage-title,
+  .homepage-subtitle {
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+  .hero-text {
+    text-align: center;
+  }
 }
 
 /* -------------------- Main Container -------------------- */
@@ -84,6 +111,14 @@ main {
   min-width: 250px;
   display: flex;
   justify-content: center;
+  margin-right: -180px;
+}
+
+/* Remove margin-right on mobile */
+@media (max-width: 768px) {
+  .hero-image {
+    margin-right: 0;
+  }
 }
 
 .hero-image img {
@@ -110,7 +145,7 @@ main {
 }
 
 .homepage-subtitle {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   color: #666;
   margin-bottom: 1.5rem;
 }
