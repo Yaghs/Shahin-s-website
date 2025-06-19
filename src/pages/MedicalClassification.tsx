@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import FDDA_Logo from '../images/FDA_Logo.png'; // Adjust path if needed
 import  '../Stylesheets/MedicalClassification.css'
 
 export default function MedicalClassification() {
+    useEffect(() => {
+        document.title = "Medical Classification Model";
+    }, []);
   return (
     <main className="page-container fade-in medical-classification-page">
       <div className="medical-header">

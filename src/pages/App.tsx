@@ -37,13 +37,19 @@ function HomeContent() {
       { threshold: 0.2 }
     );
 
+
+
     fadeRefs.current.forEach(el => {
       if (el) observer.observe(el);
     });
 
     return () => observer.disconnect();
   }, []);
-
+  
+   useEffect(() => {
+    document.title = "Home";
+  }, []);
+  
   return (
     <main className="homepage-container fade-in">
       <div className="hero-flex scroll-fade" ref={el => {fadeRefs.current[0] = el}}>

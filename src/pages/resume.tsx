@@ -1,8 +1,12 @@
 // Resume.tsx
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../Stylesheets/Resume.css';
 
 export default function Resume() {
+  useEffect(() => {
+    document.title = "Resume";
+  }
+  , []);
   return (
     <main className="resume-container fade-in">
       <h1 className="resume-title">My professional resume and portfolio</h1>

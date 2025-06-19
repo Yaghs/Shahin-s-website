@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import FDDA_Logo from '../images/FDA_Logo.png';
 import '../Stylesheets/MedicalClassification.css';
 
 export default function LabelingCostModel() {
+    useEffect(() => {
+        document.title = "Labeling Cost Model";
+    }, []);
   return (
+    
     <main className="page-container fade-in medical-classification-page">
       <div className="medical-header">
         <img src={FDDA_Logo} alt="FDA Logo" className="fda-logo" />
