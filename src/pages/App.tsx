@@ -55,10 +55,16 @@ function HomeContent() {
       </div>
 
       <p className="homepage-objective scroll-fade" ref={el => {fadeRefs.current[1] = el}}>
-        Recent Computer Science graduate with internship experience at the FDA, focused on data science,
-        automation, and full-stack development. Brings strong analytical and programming skills with a
-        collaborative mindset, eager to contribute to innovative and user-centered technology solutions.
-      </p>
+  I’m a recent Computer Science graduate with practical experience in data science, automation, and full-stack development, including a high-impact internship with the U.S. Food and Drug Administration (FDA). My work has focused on building scalable, data-driven solutions and streamlining processes through thoughtful software design.
+
+  <br /><br />
+  Currently, I’m leading an early-stage venture in the AI and data-driven technology space, operating in stealth mode. In this role, I oversee product strategy, business development, and team formation—applying both technical and strategic thinking to drive innovation.
+
+  <br /><br />
+  Whether contributing to a fast-paced team or building systems from the ground up, I bring a strong analytical foundation, attention to detail, and a results-oriented mindset. I'm actively open to opportunities where I can deliver value through software engineering, data solutions, or technical consulting.
+</p>
+
+
 
       <section className="projects-section scroll-fade" ref={el => { fadeRefs.current[2] = el as HTMLDivElement | null; }}
 >
